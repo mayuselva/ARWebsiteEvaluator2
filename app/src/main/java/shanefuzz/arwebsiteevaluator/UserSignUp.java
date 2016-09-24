@@ -6,8 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -27,7 +27,7 @@ public class UserSignUp extends AppCompatActivity {
     // UI references.
     private EditText mEmailView;
     private EditText mNameView;
-    private EditText mPhoneView;
+    //private EditText mPhoneView;
     private EditText mPasswordView;
 
 
@@ -47,7 +47,7 @@ public class UserSignUp extends AppCompatActivity {
 
 
         // Set up the SignUpActivity details.
-        //mNameView = (EditText) findViewById(R.id.text_signup_name);
+        mNameView = (EditText) findViewById(R.id.text_signup_name);
         mEmailView = (EditText) findViewById(R.id.text_signup_email);
         mPasswordView = (EditText) findViewById(R.id.text_signup_password);
         //mPhoneView = (EditText) findViewById(R.id.text_signup_phone);
@@ -57,7 +57,7 @@ public class UserSignUp extends AppCompatActivity {
 
 
         // SignUp by pressing the enter key(sign up-key)
-        mPhoneView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
 
@@ -96,9 +96,7 @@ public class UserSignUp extends AppCompatActivity {
         nameValidation();
         passwordValidation();
 
-        if (!isEmpty(mPhoneView) && !isValidNo(mPhoneView)) {
-            mPhoneView.setError("Please enter only numbers.");
-        } else if (!isEmpty(mNameView) && !isEmpty(mEmailView) && !isEmpty(mPasswordView) && isValidPassword(mPasswordView) && isValidEmail(mEmailView.getText().toString()) && !mDatabaseHandler.isEmailStore(mEmailView.getText().toString())) {
+        if (!isEmpty(mNameView) && !isEmpty(mEmailView) && isValidPassword(mPasswordView) && isValidEmail(mEmailView.getText().toString()) && !mDatabaseHandler.isEmailStore(mEmailView.getText().toString())) {
 
             mConMan = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
             mInfo = mConMan.getActiveNetworkInfo();
@@ -182,14 +180,14 @@ public class UserSignUp extends AppCompatActivity {
     public void addUser() {
 
 
-        UserProfile user = new UserProfile(mNameView.getText().toString().trim(), mEmailView.getText().toString().trim(), mPasswordView.getText().toString().trim(), mPhoneView.getText().toString().trim());
+        UserProfile user = new UserProfile(mNameView.getText().toString().trim(), mEmailView.getText().toString().trim(), mPasswordView.getText().toString().trim());
         mDatabaseHandler.addUser(user);
 
 
         mNameView.setText("");
         mEmailView.setText("");
         mPasswordView.setText("");
-        mPhoneView.setText("");
+        //mPhoneView.setText("");
 
         Toast toast = Toast.makeText(getApplicationContext(), "Your account has been successfully created. Please check your email for the confirmation.", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
@@ -229,10 +227,7 @@ public class UserSignUp extends AppCompatActivity {
      */
     private boolean isEmpty(EditText field) {
 
-        if (field.getText().toString().isEmpty()) {
-            return true;
-        }
-        return false;
+        return field.getText().toString().isEmpty();
     }
 
     /**
@@ -252,10 +247,7 @@ public class UserSignUp extends AppCompatActivity {
      * At least 8 characters.
      */
     private boolean isValidPassword(EditText filed) {
-        if (filed.getText().toString() != null && filed.getText().toString().length() > 7) {
-            return true;
-        }
-        return false;
+        return filed.getText().toString() != null && filed.getText().toString().length() > 7;
     }
 
     /**
@@ -279,7 +271,7 @@ public class UserSignUp extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(UserSignUp.this);
-        if (!isEmpty(mEmailView) || !isEmpty(mPasswordView) || !isEmpty(mPhoneView) || !isEmpty(mNameView)) {
+        if (!isEmpty(mEmailView) || !isEmpty(mPasswordView) || !isEmpty(mNameView)) {
 
             builder.setMessage("Discard the changes?");
             builder.setIcon(android.R.drawable.ic_dialog_alert);

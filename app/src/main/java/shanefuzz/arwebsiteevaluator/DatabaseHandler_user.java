@@ -17,18 +17,15 @@ public class DatabaseHandler_user extends SQLiteOpenHelper {
 
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "Budget.db";
+    private static final String DATABASE_NAME = "ARWebevaluator.db";
     private static final String TABLE_USER = "user";
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_NAME = "name";
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_PSWRD = "pswrd";
-    private static final String COLUMN_PHONE = "phone";
     private static final String COLUMN_IMAGE = "image";
-
-    public byte[] ImgBuffer = {0, 1};
-
     private static final String TAG = "DB";
+    public byte[] ImgBuffer = {0, 1};
     private SQLiteDatabase db;
 
     public DatabaseHandler_user(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -50,7 +47,6 @@ public class DatabaseHandler_user extends SQLiteOpenHelper {
                 COLUMN_NAME + " TEXT, " +
                 COLUMN_EMAIL + " TEXT, " +
                 COLUMN_PSWRD + " TEXT, " +
-                COLUMN_PHONE + " TEXT, " +
                 COLUMN_IMAGE + " BLOB " +
                 ");";
         db.execSQL(query);
@@ -79,7 +75,7 @@ public class DatabaseHandler_user extends SQLiteOpenHelper {
         values.put(COLUMN_NAME, user.get_name());
         values.put(COLUMN_EMAIL, user.get_email());
         values.put(COLUMN_PSWRD, user.get_pswrd());
-        values.put(COLUMN_PHONE, user.get_phone());
+        //values.put(COLUMN_PHONE, user.get_phone());
         SQLiteDatabase db = getWritableDatabase();
         db.insert(TABLE_USER, null, values);
         db.close();
@@ -126,7 +122,7 @@ public class DatabaseHandler_user extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
         values.put(COLUMN_EMAIL, email);
-        values.put(COLUMN_PHONE, phone);
+        //values.put(COLUMN_PHONE, phone);
 
         db.update(TABLE_USER, values, COLUMN_ID + " = ? ", new String[]{id});
 
@@ -151,7 +147,7 @@ public class DatabaseHandler_user extends SQLiteOpenHelper {
             c.moveToFirst();
             user.set_name(c.getString(1));
             user.set_email(c.getString(2));
-            user.set_phone(c.getString(4));
+            //user.set_phone(c.getString(4));
             c.close();
         } else {
             user = null;
@@ -176,13 +172,13 @@ public class DatabaseHandler_user extends SQLiteOpenHelper {
         UserProfile user = new UserProfile();
 
 
-        if (c.moveToFirst()) {
+        /*if (c.moveToFirst()) {
             c.moveToFirst();
             user.set_id(Integer.parseInt(c.getString(0)));
             user.set_name(c.getString(1));
             user.set_email(c.getString(2));
             user.set_pswrd(c.getString(3));
-            user.set_phone(c.getString(4));
+            //user.set_phone(c.getString(4));
 
             Log.e(TAG, String.valueOf(c.getBlob(5)));
 
@@ -195,7 +191,7 @@ public class DatabaseHandler_user extends SQLiteOpenHelper {
 
         } else {
             user = null;
-        }
+        }*/
         db.close();
 
         return user;

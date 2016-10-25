@@ -60,7 +60,7 @@ public class TextPlane extends MeshObject
     }
 
     @Override
-    //fhfghfgj
+   
     public int getNumObjectVertex() {
         return planeVertices.length;
     }

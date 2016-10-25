@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="eeee" size="261.000000 212.000000" />
+    <ImageTarget name="lllllllll" size="255.000000 226.000000" />
+    <ImageTarget name="badbadlabel" size="286.000000 318.000000" />
+    <ImageTarget name="badlabel" size="220.000000 272.000000" />
+    <ImageTarget name="bad3_label" size="277.000000 211.000000" />
+    <ImageTarget name="bad" size="271.000000 298.000000" />
+    <ImageTarget name="test" size="388.000000 108.000000" />
+    <ImageTarget name="FormatFactorybtnimg_Copy" size="424.000000 119.000000" />
+    <ImageTarget name="eeeeeeeeeeeeeeeee" size="528.000000 294.000000" />
+    <ImageTarget name="FormatFactoryuibutton" size="620.000000 350.000000" />
+    <ImageTarget name="b1" size="680.000000 400.000000" />
+    <ImageTarget name="stone" size="268.000000 188.000000" />
+  </Tracking>
+</QCARConfig>

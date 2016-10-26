@@ -79,7 +79,7 @@
 
         <!-- Splash Screen Activity -->
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.ui.ActivityList.ActivitySplashScreen"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.ui.ActivityList.ActivitySplashScreen"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:noHistory="true"
             android:screenOrientation="portrait">
@@ -91,12 +91,12 @@
         </activity>
 
         <activity
-            android:name=".UserProfile.UserProfile.App.UserProfile.UserSignUp"
+            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.UserProfile.UserSignUp"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"></activity>
 
         <activity
-            android:name=".UserProfile.UserProfile.App.UserProfile.UserSignIn"
+            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.UserProfile.UserSignIn"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"></activity>
 

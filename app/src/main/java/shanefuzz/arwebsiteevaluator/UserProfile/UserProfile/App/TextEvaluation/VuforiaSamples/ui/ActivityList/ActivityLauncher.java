@@ -20,6 +20,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import shanefuzz.arwebsiteevaluator.R;
+import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.FrameMarkers.FrameMarkers;
+import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ImageTargets.ImageTargets;
+import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.TextRecognition.TextReco;
+import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.UserDefinedTargets.UserDefinedTargets;
 
 
 // This activity starts activities which demonstrate the Vuforia features
@@ -115,21 +119,25 @@ public class ActivityLauncher extends ListActivity
                 intent.putExtra("ACTIVITY_TO_LAUNCH",
                         "app.TextRecognition.TextReco");
                 intent.putExtra("ABOUT_TEXT", "TextReco/TR_about.html");
+                intent = new Intent(this,TextReco.class);
                 break;
             case 1:
                 intent.putExtra("ACTIVITY_TO_LAUNCH",
-                        "app.VirtualButtons.VirtualButtons");
+                        "app.FrameMarkers.FrameMarkers");
                 intent.putExtra("ABOUT_TEXT", "VirtualButtons/VB_about.html");
+                intent = new Intent(this, FrameMarkers.class);
                 break;
             case 2:
                 intent.putExtra("ACTIVITY_TO_LAUNCH",
                         "app.UserDefinedTargets.UserDefinedTargets");
                 intent.putExtra("ABOUT_TEXT", "UserDefinedTargets/UD_about.html");
+                intent = new Intent(this, UserDefinedTargets.class);
                 break;
             case 3:
                 intent.putExtra("ACTIVITY_TO_LAUNCH",
                         "app.ImageTargets.ImageTargets");
                 intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
+                intent = new Intent(this,ImageTargets.class);
                 break;
 
         }

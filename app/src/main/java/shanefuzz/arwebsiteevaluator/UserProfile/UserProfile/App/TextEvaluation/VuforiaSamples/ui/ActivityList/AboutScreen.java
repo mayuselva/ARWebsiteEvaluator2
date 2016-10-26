@@ -60,7 +60,9 @@ public class AboutScreen extends Activity implements OnClickListener
         mClassToLaunchPackage = getPackageName();
         mClassToLaunch = mClassToLaunchPackage + "."
             + extras.getString("ACTIVITY_TO_LAUNCH");
-        
+
+
+
         mAboutWebText = (WebView) findViewById(R.id.about_html_text);
         
         AboutWebViewClient aboutWebClient = new AboutWebViewClient();
@@ -99,12 +101,10 @@ public class AboutScreen extends Activity implements OnClickListener
     {
         //Intent i = new Intent();
         //i.setClassName(mClassToLaunchPackage, mClassToLaunch);
-        //startActivity(i);
+       // startActivity(i);
 
-       // Intent intent = new Intent(this, TextReco.class);
+        // intent.setClassName();
        // startActivity(intent);
-        Intent intent = new Intent(this, ImageTargets.class);
-        startActivity(intent);
     }
     
     

@@ -103,8 +103,6 @@ public class AboutScreen extends Activity implements OnClickListener
         //i.setClassName(mClassToLaunchPackage, mClassToLaunch);
        // startActivity(i);
 
-        // intent.setClassName();
-       // startActivity(intent);
     }
     
     

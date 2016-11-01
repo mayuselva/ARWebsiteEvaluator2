@@ -170,14 +170,21 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
     {
         mTextures.add(Texture.loadTextureFromApk("TextureTeapotBrass.png",
                 getAssets()));
-        mTextures.add(Texture.loadTextureFromApk("TextureTeapotRed.png",
+        mTextures.add(Texture.loadTextureFromApk("not_detect.png",
                 getAssets()));
 
         mTextures.add(Texture.loadTextureFromApk("stone.png",
                 getAssets()));
         mTextures.add(Texture.loadTextureFromApk("vumark_texture.png",
                 getAssets()));
+
         mTextures.add(Texture.loadTextureFromApk("label.png",
+                getAssets()));
+        mTextures.add(Texture.loadTextureFromApk("rating2.png",
+                getAssets()));
+        mTextures.add(Texture.loadTextureFromApk("Login_Page.png",
+                getAssets()));
+        mTextures.add(Texture.loadTextureFromApk("content_page.png",
                 getAssets()));
         mTextures.add(Texture.loadTextureFromApk("ImageTargets/Buildings.jpeg",
                 getAssets()));

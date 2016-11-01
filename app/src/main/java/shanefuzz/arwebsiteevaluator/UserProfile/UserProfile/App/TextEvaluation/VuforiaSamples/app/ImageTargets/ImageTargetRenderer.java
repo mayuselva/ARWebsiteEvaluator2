@@ -12,7 +12,9 @@ package shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
+import android.os.Debug;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.vuforia.Device;
 import com.vuforia.Matrix44F;
@@ -56,6 +58,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
     private int textureCoordHandle;
     private int mvpMatrixHandle;
     private int texSampler2DHandle;
+    private String name;
     
     private Teapot mTeapot;
     private TextPlane mTextPlane;
@@ -188,6 +191,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
     // State should not be cached outside this method.
     public void renderFrame(State state, float[] projectionMatrix)
     {
+        int textureIndex;
         // Renders video background replacing Renderer.DrawVideoBackground()
         mSampleAppRenderer.renderVideoBackground();
 
@@ -202,25 +206,43 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
         else
             GLES20.glFrontFace(GLES20.GL_CCW); // Back camera
 
+        if (state.getNumTrackableResults() == 0) {
+                //Debug.Log();
+            textureIndex =  1;
+
+        }
+
         // Did we find any trackables this frame?
         for (int tIdx = 0; tIdx < state.getNumTrackableResults(); tIdx++) {
             TrackableResult result = state.getTrackableResult(tIdx);
             Trackable trackable = result.getTrackable();
+            name=trackable.getName();
+           // Toast.makeText(getActivity(), "Your Message", Toast.LENGTH_LONG).show();
+
+
             printUserData(trackable);
+
             Matrix44F modelViewMatrix_Vuforia = Tool
                     .convertPose2GLMatrix(result.getPose());
             float[] modelViewMatrix = modelViewMatrix_Vuforia.getData();
 
-            int textureIndex = trackable.getName().equalsIgnoreCase("stone") ? 2
+             textureIndex = trackable.getName().equalsIgnoreCase("stone") ? 2
                     : 1;
             textureIndex = trackable.getName().equalsIgnoreCase("eeeeeeeeeeeeeeeee") ? 3
                     : textureIndex;
-            textureIndex = trackable.getName().equalsIgnoreCase("b1") ? 3
+           textureIndex = trackable.getName().equalsIgnoreCase("b1") ? 3
                     : textureIndex;
             textureIndex = trackable.getName().equalsIgnoreCase("bad") ? 3
                     : textureIndex;
             textureIndex = trackable.getName().equalsIgnoreCase("eeee") ? 4
                     : textureIndex;
+            textureIndex = trackable.getName().equalsIgnoreCase("tets2") ? 7
+                    : textureIndex;
+            textureIndex = trackable.getName().equalsIgnoreCase("loginPage") ? 6
+                    : textureIndex;
+            textureIndex = trackable.getName().equalsIgnoreCase("content") ? 7
+                    : textureIndex;
+
 
             // deal with the modelview and projection matrices
             float[] modelViewProjection = new float[16];
@@ -253,7 +275,8 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
                 GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
                 GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,
                         mTextures.get(textureIndex).mTextureID[0]);
-                GLES20.glUniform1i(texSampler2DHandle, 0);
+                        GLES20.glUniform1i(texSampler2DHandle, 0);
+
 
                 // pass the model view matrix to the shader
                 GLES20.glUniformMatrix4fv(mvpMatrixHandle, 1, false,
@@ -292,14 +315,17 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
             SampleUtils.checkGLError("Render Frame");
 
         }
-
+//end of for loop
         GLES20.glDisable(GLES20.GL_DEPTH_TEST);
 
     }
 
+
+
     private void printUserData(Trackable trackable)
     {
-        String userData = (String) trackable.getUserData();
+       // String userData = (String) trackable.getUserData();
+        String userData = (String) trackable.getName();
         Log.d(LOGTAG, "UserData:Retreived User Data	\"" + userData + "\"");
     }
     

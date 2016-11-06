@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WebViewCommunication</title>
+<script type="text/javascript">
+/*<![CDATA[*/
+function callFromApp(s,c) {
+	var component = document.getElementById("input");
+	component.value = s+"JavaScript called from app!\n";
+}
+function GetPrecentage(cwith, ccolor) {
+
+    if (!cwith && !ccolor) return;
+
+    var _cwith  = (cwith.charAt(0)=="#") ?  cwith.substring(1,7) : cwith;
+    var _ccolor = (ccolor.charAt(0)=="#") ? ccolor.substring(1,7) : ccolor;
+
+    var _r = parseInt(_cwith.substring(0,2), 16);
+    var _g = parseInt(_cwith.substring(2,4), 16);
+    var _b = parseInt(_cwith.substring(4,6), 16);
+
+    var __r = parseInt(_ccolor.substring(0,2), 16);
+    var __g = parseInt(_ccolor.substring(2,4), 16);
+    var __b = parseInt(_ccolor.substring(4,6), 16);
+
+    var p1 = (_r / 255) * 100;
+    var p2 = (_g / 255) * 100;
+    var p3 = (_b / 255) * 100;
+
+    var perc1 = Math.round((p1 + p2 + p3)    / 3);
+
+    var p1 = (__r / 255) * 100;
+    var p2 = (__g / 255) * 100;
+    var p3 = (__b / 255) * 100;
+
+    var perc2 = Math.round((p1 + p2 + p3)/ 3);
+
+    return Math.abs(perc1 - perc2);
+}
+
+
+function androidResponse(c1,c2,c3,c4,c5,c6) {
+var divident=30;
+   if(c1== "#0"){
+   c1="#000000";
+   divident=divident-5;
+   }
+
+   if(c2== "#0"){
+   c2="#000000";
+   divident=divident-5;
+   }
+
+   if(c3== "#0"){
+   c3="#000000";
+   divident=divident-5;
+   }
+
+   if(c4== "#0"){
+   c4="#000000";
+   divident=divident-5;
+   }
+
+   if(c5== "#0"){
+   c5="#000000";
+   divident=divident-5;
+   }
+
+    if(c6== "#0"){
+   c6="#000000";
+   divident=divident-5;
+   }
+
+   var results=new Array();
+   var presult=0;
+
+   var carray= [c1,c2,c3,c4,c5,c6];
+   var index=0;
+   for(var i=0;i<=5;i++){
+        for(var n=0;n<=5;n++){
+        if(n==i){
+        continue;
+        }
+        results[index]=GetPrecentage(carray[i],carray[n])
+        index++;
+        }
+    }
+     for(var t=0;t<30;t++){
+     presult=presult+results[t]
+    }
+    if(divident==0){
+       presult=presult;
+    }
+    else
+    presult=presult/divident;
+
+   window.cpjs.sendToAndroid(presult);
+}
+/*]]>*/
+</script>
+</head>
+<body>
+<p></p>
+<a href="caphal://toast/">Custom protocol URL</a>
+</p>
+<p>
+<button onclick="interface.callFromJS('mmm')">JavaScript interface</button>
+</p>
+<p>
+<textarea rows="5" cols="30" id="input"></textarea>
+</p>
+</body>
+</html>

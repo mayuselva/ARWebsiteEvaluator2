@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets'] } }
 }
 
 dependencies {
@@ -26,4 +27,5 @@ dependencies {
     compile 'com.android.support:design:23.0.0'
     compile files('libs/mail.jar')
     compile files('libs/Vuforia.jar')
+    compile 'com.android.support:palette-v7:23.2.1'
 }

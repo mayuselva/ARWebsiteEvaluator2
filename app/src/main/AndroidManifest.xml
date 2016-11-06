@@ -170,6 +170,11 @@
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
 
             android:launchMode="singleTask"></activity>
+        <activity
+            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ColorDetect.DetectColor"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
+
+            android:launchMode="singleTask"></activity>
     </application>
 
 </manifest>

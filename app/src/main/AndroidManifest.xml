@@ -2,15 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="shanefuzz.arwebsiteevaluator">
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <!--
         The application's compatibility with one or more versions of the Android
         platform.
@@ -21,6 +12,15 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-feature android:glEsVersion="0x00020000" />
 
@@ -40,22 +40,17 @@
     -->
     <uses-feature android:name="android.hardware.camera" />
 
-    <!--
-        Add this permission to get access to the camera.
-    -->
+    <!-- Add this permission to get access to the camera. -->
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <!--
-        Add this permission to allow opening network sockets.
-    -->
+    <!-- Add this permission to allow opening network sockets. -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <!--
         Add this permission to check which network access properties (e.g.
         active type: 3G/WiFi).
-     -->
+    -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <!--
@@ -68,14 +63,12 @@
       If this attribute is not set, the default value 'standard' is used, which
       would allow the activity to be launched multiple times.
     -->
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ar"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
 
         <!-- Splash Screen Activity -->
         <activity
@@ -89,92 +82,69 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.UserProfile.UserSignUp"
+            android:name=".UserProfile.UserProfile.App.UserProfile.UserSignUp"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-            android:screenOrientation="portrait"></activity>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.UserProfile.UserSignIn"
+            android:name=".UserProfile.UserProfile.App.UserProfile.UserSignIn"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-            android:screenOrientation="portrait"></activity>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.ui.ActivityList.ActivityLauncher"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.ui.ActivityList.ActivityLauncher"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-            android:screenOrientation="portrait"></activity>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.ui.ActivityList.AboutScreen"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.ui.ActivityList.AboutScreen"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:noHistory="true"
-            android:screenOrientation="portrait"></activity>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ImageTargets.ImageTargets"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ImageTargets.ImageTargets"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.VuMark.VuMark"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.VuMark.VuMark"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.TextRecognition.TextReco"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.TextRecognition.TextReco"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.CylinderTargets.CylinderTargets"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.CylinderTargets.CylinderTargets"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.FrameMarkers.FrameMarkers"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.FrameMarkers.FrameMarkers"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.VirtualButtons.VirtualButtons"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.VirtualButtons.VirtualButtons"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.UserDefinedTargets.UserDefinedTargets"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.UserDefinedTargets.UserDefinedTargets"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.MultiTargets.MultiTargets"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.MultiTargets.MultiTargets"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.CloudRecognition.CloudReco"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.CloudRecognition.CloudReco"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
-
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ObjectRecognition.ObjectTargets"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ObjectRecognition.ObjectTargets"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
         <activity
-            android:name="shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ColorDetect.DetectColor"
+            android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ColorDetect.DetectColor"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
-
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
+        <activity android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ColorDetect.ManualColorDetect" />
+        <activity android:name=".UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ColorDetect.ColorDetectSplash"></activity>
     </application>
 
 </manifest>

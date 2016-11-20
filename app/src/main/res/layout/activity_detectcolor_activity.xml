@@ -13,6 +13,8 @@
         android:id="@+id/btnopen"
         android:layout_width="200dp"
         android:layout_height="75dp"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
         android:text="Load image"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@+id/textView" />

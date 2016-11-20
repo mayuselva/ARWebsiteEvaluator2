@@ -22,7 +22,6 @@
     <string name="font_family">Tahoma</string>
 
 
-    
     <string name="app_description">ARWebsiteEvaluator Applications</string>
 
     <string name="button_start">Start</string>
@@ -88,7 +87,6 @@
     <string name="menu_button_green">Green</string>
 
     <string name="splash_screen_description">ARWebsiteEvaluator Splash</string>
-
 
 
 </resources>

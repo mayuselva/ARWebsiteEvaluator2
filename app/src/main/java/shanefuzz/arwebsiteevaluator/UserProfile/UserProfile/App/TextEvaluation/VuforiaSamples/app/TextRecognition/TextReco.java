@@ -98,14 +98,22 @@ public class TextReco extends Activity implements SampleApplicationControl,
     
     private GestureDetector mGestureDetector;
     
+
+
     // Alert Dialog used to display SDK errors
     private AlertDialog mErrorDialog;
-    
+
     boolean mIsDroidDevice = false;
     public TextView tv;
     public TextView previousView;
-    
-    
+
+
+    String[] myStringArray = new String[10];
+
+    String msg1,msg2,msg3,msg4;
+
+
+
     // Called when the activity first starts or the user navigates back to an
     // activity.
     @Override

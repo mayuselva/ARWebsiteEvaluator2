@@ -500,7 +500,7 @@ public class TextReco extends Activity implements SampleApplicationControl,
                         tv = new TextView(TextReco.this);
                         if(!word.text.equalsIgnoreCase("log"))
                         {
-                            msg1 = "Log in option should be included on top right corner";
+                            msg1 = "Log In option should be included on top right corner";
 
                         }
                         else { msg1 = "";}

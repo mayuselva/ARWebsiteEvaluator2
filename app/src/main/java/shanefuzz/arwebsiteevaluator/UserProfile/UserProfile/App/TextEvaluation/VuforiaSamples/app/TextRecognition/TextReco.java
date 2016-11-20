@@ -478,7 +478,7 @@ public class TextReco extends Activity implements SampleApplicationControl,
                         words.size(), params.width, 32, 12);
                     
                     int count = -1;
-                    int nbWords = textInfo[2]; // number of words we can displa
+                    int nbWords = textInfo[2]; // number of words we can display
                     previousView = null;
                     //TextView previousView = null;
                     //TextView tv;

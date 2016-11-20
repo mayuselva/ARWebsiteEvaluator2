@@ -43,58 +43,53 @@ function androidResponse(c1,c2,c3,c4,c5,c6) {
 var divident=30;
    if(c1== "#0"){
    c1="#000000";
-   divident=divident-5;
+   //divident=divident-5;
    }
 
    if(c2== "#0"){
    c2="#000000";
-   divident=divident-5;
+   //divident=divident-5;
    }
 
    if(c3== "#0"){
    c3="#000000";
-   divident=divident-5;
+   //divident=divident-5;
    }
 
    if(c4== "#0"){
    c4="#000000";
-   divident=divident-5;
+  // divident=divident-5;
    }
 
    if(c5== "#0"){
    c5="#000000";
-   divident=divident-5;
+   //divident=divident-5;
    }
 
     if(c6== "#0"){
    c6="#000000";
-   divident=divident-5;
+   //divident=divident-5;
    }
 
-   var results=new Array();
-   var presult=0;
+   var result=0;
+   result=result+GetPrecentage(c1,c4);
+   result=result+GetPrecentage(c2,c5);
+   result=result+GetPrecentage(c3,c6)
+   result=result/3;
+   window.cpjs.sendToAndroid(result);
+}
 
-   var carray= [c1,c2,c3,c4,c5,c6];
-   var index=0;
-   for(var i=0;i<=5;i++){
-        for(var n=0;n<=5;n++){
-        if(n==i){
-        continue;
-        }
-        results[index]=GetPrecentage(carray[i],carray[n])
-        index++;
-        }
-    }
-     for(var t=0;t<30;t++){
-     presult=presult+results[t]
-    }
-    if(divident==0){
-       presult=presult;
-    }
-    else
-    presult=presult/divident;
+function androidResponse2(c1,c2) {
+var result=0;
+ if(c1== "#0"){
+   c1="#000000";
+   }
 
-   window.cpjs.sendToAndroid(presult);
+   if(c2== "#0"){
+   c2="#000000";
+   }
+   result=result+GetPrecentage(c1,c2);
+   window.cpjs.sendToAndroid(result);
 }
 /*]]>*/
 </script>

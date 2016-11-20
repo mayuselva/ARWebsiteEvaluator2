@@ -1,3 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.1_86d7da90e24bd83f137020d7ead39085d0118243\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.2.1_00965e29a1443c1b88a454731cdeafd6f0b7cd18\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a210a0d5502207184cd129268c7e93381a3d4800">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4d6c5bfe38607181c16431bf70c8ae121742e4b3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\exploded-aar\com.android.support\palette-v7\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="bcee2598dbb74f6d043225a0d7e178b0c7ea4006">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-23.2.1_e254708f112c98fcd2c5062b5ae342bf6cfcf6d3\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.2.1_a9bbd32ef82b19769298acc64cd1fec2bf62b0d4\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.2.1_758ac25f751d4eb68fb5164d2befa8f37a52028c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\libs\mail.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="428e267abff0d10802ccde86b915da2c20471160">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\2\mail_090d4025b11ce237d292ae913391cf0d2ed408ed\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.2.1_9c360f8701d0ef1a3c8eaceb7ed907208de1716c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="957db2ec61ab1b85608b073ca75eecb4996e9d83">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_2376df595ad5e53d8c48716b364ac92e97089263\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\libs\Vuforia.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="68bf3aa0a0e9c14d708c2c6cdbd475aee6ca9dfe">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\2\Vuforia_639e13dfa74b774cc06212ebbe8bee4ba1b94e34\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.2.1_ebf5158adc67c0a04bb9ff912a522e2e6f1ccc09\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
+        <dex dex="C:\Users\Prabhath\Documents\ar\ARWebsiteEvaluator\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.0.0_ac2195bc569484c4fb92b68064b29c052348b124\classes.dex" />
+    </item>
+
+</items>

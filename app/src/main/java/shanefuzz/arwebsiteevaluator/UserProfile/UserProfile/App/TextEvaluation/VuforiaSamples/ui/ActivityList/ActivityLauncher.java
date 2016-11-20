@@ -21,6 +21,7 @@ import android.widget.ListView;
 
 import shanefuzz.arwebsiteevaluator.R;
 import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ColorDetect.DetectColor;
+import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ColorDetect.ManualColorDetect;
 import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.FrameMarkers.FrameMarkers;
 import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.ImageTargets.ImageTargets;
 import shanefuzz.arwebsiteevaluator.UserProfile.UserProfile.App.TextEvaluation.VuforiaSamples.app.TextRecognition.TextReco;
@@ -35,7 +36,7 @@ public class ActivityLauncher extends ListActivity
             "Multi Targets", "User Defined Targets", "Object Reco", "Cloud Reco", "Text Reco",
             "Frame Markers", "Virtual Buttons"};*/
 
-     private String mActivities[] = { "Evaluate Home Page", "Evaluate SignUp page", "Evaluate Content pages","Image Target","Evaluate Color "};
+     private String mActivities[] = { "Evaluate Home Page", "Evaluate SignUp page", "Evaluate Content pages","Image Target","Evaluate Color","Evaluate Color(Manually)"};
     
     
     @Override
@@ -147,6 +148,13 @@ public class ActivityLauncher extends ListActivity
                        "app.ImageTargets.ImageTargets");
                 intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
                 intent = new Intent(this,DetectColor.class);
+                break;
+
+            case 5:
+                intent.putExtra("ACTIVITY_TO_LAUNCH",
+                        "app.ImageTargets.ImageTargets");
+                intent.putExtra("ABOUT_TEXT", "ImageTargets/IT_about.html");
+                intent = new Intent(this,ManualColorDetect.class);
                 break;
 
         }

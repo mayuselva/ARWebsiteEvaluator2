@@ -482,6 +482,7 @@ public class TextReco extends Activity implements SampleApplicationControl,
                     previousView = null;
                     //TextView previousView = null;
                     //TextView tv;
+                   
                     for (WordDesc word : words)
                     {
                         count++;
@@ -490,51 +491,63 @@ public class TextReco extends Activity implements SampleApplicationControl,
                             break;
                         }
 
+                        Log.e("selected word",word.text);
+
                         tv = new TextView(TextReco.this);
-                        if(!word.text.equalsIgnoreCase("logout"))
+                        if(!word.text.equalsIgnoreCase("log"))
                         {
-                            tv.setText("Logout option should be included on top right corner");
+                            msg1 = "Log in option should be included on top right corner";
 
                         }
+                        else { msg1 = "";}
                         if(!word.text.equalsIgnoreCase("contact"))
                         {
-                            tv.setText("Include 'Contact' field there on top right.");
+                            msg2 = "Include 'Contact' field there on top right.";
 
                         }
+                        else { msg2 = "";}
                         if(!word.text.equalsIgnoreCase("home"))
                         {
-                            tv.setText("Include 'Home' field there on top.");
+                            msg3 = "Include 'Home' field there on top.";
 
                         }
+                        else { msg3 = "";}
                         if(!word.text.equalsIgnoreCase("about"))
                         {
-                            tv.setText("Include 'About' field there on top.");
+                            msg4 = "Include 'About' field there on top.";
 
                         }
+                        else { msg4 = "";}
+
+
+                        Log.e("final msg",msg1+"\n"+msg2+"\n"+msg3+"\n"+msg4);
 
                         tv.setTextSize(1);
-                        //tv.setText(word.text);
+                        tv.setText(msg1+"\n"+msg2+"\n"+msg3+"\n"+msg4);
+
                         RelativeLayout.LayoutParams txtParams = new RelativeLayout.LayoutParams(
-                            LayoutParams.MATCH_PARENT,
-                            LayoutParams.WRAP_CONTENT);
-                        
+                                LayoutParams.MATCH_PARENT,
+                                LayoutParams.WRAP_CONTENT);
+
                         if (previousView != null)
                             txtParams.addRule(RelativeLayout.BELOW,
-                                previousView.getId());
-                        
+                                    previousView.getId());
+
                         txtParams.setMargins(0, (count == 0) ? WORDLIST_MARGIN
-                            : 0, 0, (count == (nbWords - 1)) ? WORDLIST_MARGIN
-                            : 0);
+                                : 0, 0, (count == (nbWords - 1)) ? WORDLIST_MARGIN
+                                : 0);
                         tv.setLayoutParams(txtParams);
                         tv.setGravity(Gravity.CENTER_VERTICAL
-                            | Gravity.CENTER_HORIZONTAL);
+                                | Gravity.CENTER_HORIZONTAL);
                         tv.setTextSize(textInfo[0]);
                         tv.setTextColor(Color.WHITE);
-                        tv.setHeight(textInfo[1]);
+                        //tv.setHeight(textInfo[1]);
+                        tv.setHeight(500);
                         tv.setId(count + 100);
-                        
+
                         //wordListLayout.addView(tv);
                         //previousView = tv;
+
                     }
 
                     wordListLayout.addView(tv);

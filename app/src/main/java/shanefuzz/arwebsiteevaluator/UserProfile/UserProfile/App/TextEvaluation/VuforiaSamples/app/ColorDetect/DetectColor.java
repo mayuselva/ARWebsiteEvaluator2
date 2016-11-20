@@ -162,7 +162,7 @@ public class DetectColor extends AppCompatActivity {
             }
             if(requestCode==CAMERA_REQUEST && resultCode == Activity.RESULT_OK){
 
-               // Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+               // Bitmap thumbnail = (Bitmap) data.getExtras().get("data")
                // imageView.setImageBitmap(thumbnail);
                 //imageView.getLayoutParams().height=1000;
                 //extractProminentColors(thumbnail);

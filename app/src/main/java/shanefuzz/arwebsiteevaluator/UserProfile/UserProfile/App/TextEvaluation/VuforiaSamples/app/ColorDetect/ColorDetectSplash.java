@@ -66,7 +66,7 @@ public class ColorDetectSplash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
-                //Simulating a long running task
+                //Simulating a long running taskm
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

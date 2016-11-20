@@ -78,7 +78,7 @@ public class TextReco extends Activity implements SampleApplicationControl,
     private final static int COLOR_OPAQUE = Color.argb(178, 0, 0, 0);
     private final static int WORDLIST_MARGIN = 10;
     
-    // Our OpenGL view:
+    // Our OpenGL view bla:
     private SampleApplicationGLView mGlView;
     
     // Our renderer:

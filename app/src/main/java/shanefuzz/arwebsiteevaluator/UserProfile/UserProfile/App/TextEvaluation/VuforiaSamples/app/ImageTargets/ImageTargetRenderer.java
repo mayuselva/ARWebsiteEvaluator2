@@ -324,7 +324,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
 
     private void printUserData(Trackable trackable)
     {
-       // String userData = (String) trackable.getUserData();
+
         String userData = (String) trackable.getName();
         Log.d(LOGTAG, "UserData:Retreived User Data	\"" + userData + "\"");
     }
